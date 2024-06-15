@@ -1,0 +1,4 @@
+city_name: Balchik
+price: 140
+Rect: 440 820 160 80
+Color: 3

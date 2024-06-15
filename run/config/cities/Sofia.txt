@@ -1,0 +1,4 @@
+Name: Sofia
+Price: 60
+City_Rect: 1240 900 80 160
+Color: 1

@@ -1,0 +1,4 @@
+Name: Dragoman
+Price: 60
+City_Rect: 1080 900 80 160
+Color: 1

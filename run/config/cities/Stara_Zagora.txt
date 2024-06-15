@@ -1,0 +1,4 @@
+Name: Stara_Zagora
+Price: 320
+City_Rect: 1320 340 160 80
+Color: 7

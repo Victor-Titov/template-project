@@ -1,0 +1,4 @@
+Name: Levski
+Price: 280
+City_Rect: 1240 20 80 160
+Color: 6
