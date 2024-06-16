@@ -94,12 +94,11 @@ void Player::burningFuel()
     }
 }
 
-bool Player::collisionDetection(SDL_Rect debreeRect)
+void Player::collisionDetection(SDL_Rect debreeRect, int type)
 {
-    if (((debreeRect.x > m_rocket.rect.x && debreeRect.x < m_rocket.rect.x + m_rocket.rect.w) || (m_rocket.rect.x > debreeRect.x && m_rocket.rect.x < debreeRect.x + debreeRect.w)) && ((debreeRect.y > m_rocket.rect.y && debreeRect.y < m_rocket.rect.y + m_rocket.rect.h) || (m_rocket.rect.y > debreeRect.y && m_rocket.rect.y < debreeRect.y + debreeRect.h))) {
-        return true;
+    if (collRectRect(debreeRect, m_rocket.rect)) {
+        statsChange(type);
     }
-    return false;
 }
 
 int Player::getHealth()

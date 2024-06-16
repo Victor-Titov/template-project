@@ -58,3 +58,18 @@ void debree_generator::destroy()
 		debree[i].destroy();
 	}
 }
+
+SDL_Rect debree_generator::getDebreeRect(int debree_num)
+{
+	return debree[debree_num].getRect();
+}
+
+int debree_generator::getDerbeeAmount()
+{
+	return m_debreeAmount;
+}
+
+int debree_generator::getDebreeType(int debree_num)
+{
+	return debree[debree_num].getType();
+}
