@@ -10,7 +10,7 @@ void Space_debree::init(int start, int2 speed, SDL_Texture* texture, int2 size, 
 	m_drawable.rect.w = size.x;
 	m_drawable.rect.h = size.y;
 	m_drawable.texture = texture;
-	
+	m_type = type;
 
 	
 }

@@ -42,7 +42,7 @@ void WinScreen::run()
 	m_playAgain.draw();
 	m_quit.update();
 	m_quit.draw();
-	m_winnerField.setText("Player " + to_string(1) + " won");
+	m_winnerField.setText("GAME OVER!");
 	m_winnerField.update();
 	m_winnerField.draw();
 

@@ -78,6 +78,7 @@ void TextField::setText(string text)
 		
 
 		//cout << m_text.rect.x << ' ' << m_text.rect.y << '\n';
+		cout << "I'm alive\n";
 		m_text.rect.x = m_background.rect.x + (m_background.rect.w - result.first.x) / 2;
 		m_text.rect.y = m_background.rect.y + (m_background.rect.h - result.first.y) / 2;
 		m_text.rect.w = result.first.x;

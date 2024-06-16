@@ -12,6 +12,6 @@ public:
 protected:
 	Drawable m_drawable;
 	int2 m_speed;
-	int m_type;// 1 - pepper, 2 - meteor, 3 - star
+	int m_type;// 1 - pepper, 2 - meteor, 3 - star, 4 - cat
 
 };

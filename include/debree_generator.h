@@ -12,10 +12,11 @@ public:
 	SDL_Rect getDebreeRect(int debree_num);
 	int getDerbeeAmount();
 	int getDebreeType(int debree_num);
+	void reset(int debree_num);
 private:
 	Space_debree temp_debree;
 	int m_debreeAmount;
-	SDL_Texture* m_textures[3];
+	SDL_Texture* m_textures[4];
 	int2 m_spawnRange;
 	int2 m_verticalSpeedRange;
 	int2 m_horizontalSpeedRange;

@@ -30,6 +30,8 @@ void Player::init(string configFile, int arg_speed)
     m_rocket.texture = loadTexture(GAME_FOLDER + textureImgPath);
     m_health = 10;
     m_fuel = 1000;
+    m_maxHealth = 10;
+    m_maxFuel = 1000;
     m_speed = arg_speed;
     original_speed = arg_speed;
     m_nitro = false;
@@ -37,12 +39,16 @@ void Player::init(string configFile, int arg_speed)
 
     m_healthBar.init("health_bar.txt");
     m_fuelBar.init("fuel_bar.txt");
-
+    m_score_field.init("score.txt");
+    
 }
 
 void Player::update()
 {
-
+    m_fuelBar.setBar(m_fuel, m_maxFuel);
+    m_healthBar.setBar(m_health, m_maxHealth);
+    m_score_field.setText("Score: " + to_string(m_score));
+   
 }
 
 void Player::draw()
@@ -50,11 +56,13 @@ void Player::draw()
     drawObject(m_rocket);
     m_healthBar.draw();
     m_fuelBar.draw();
+    m_score_field.draw();
 }
 
 void Player::destroy()
 {
     SDL_DestroyTexture(m_rocket.texture);
+    m_score_field.destroy();
     m_healthBar.destroy();
     m_fuelBar.destroy();
 }
@@ -75,6 +83,7 @@ void Player::statsChange(int arg_type)
 {
     switch (arg_type) {
     case 1: // pepper
+        m_fuel = m_maxFuel;
         m_fuel = 1000;
         break;
 
@@ -85,8 +94,13 @@ void Player::statsChange(int arg_type)
 
     case 3: // star
         m_health += 1;
+        if (m_health > m_maxHealth) {
+            m_health = m_maxHealth;
+        }
         m_healthBar.setBar(m_health, 10);
         break;
+    case 4:
+        m_score++;
 
     default:
         break;
@@ -98,37 +112,40 @@ void Player::burningFuel()
     if (m_fuel > 0) {
         if (isKeyPressed(SDL_SCANCODE_SPACE)) {
             m_fuel -= 5;
-            m_fuelBar.setBar(m_fuel, 1000);
+           
             m_speed = original_speed + 5;
         }
         else {
             m_speed = original_speed;
             m_fuel -= 1;
-            m_fuelBar.setBar(m_fuel, 1000);
+            
         }
-        cout << m_fuel << endl;
+        //cout << m_fuel << endl;
     }
     else {
         if (isKeyPressed(SDL_SCANCODE_SPACE)) {
             m_health -= 5;
-            m_healthBar.setBar(m_health, 10);
+            
             m_speed = original_speed + 5;
         }
         else {
             m_speed = original_speed;
             m_health -= 1;
-            m_healthBar.setBar(m_health, 10);
+            
         }
-        cout << m_health << endl;
+        //cout << m_health << endl;
         m_fuel = 0;
     }
 }
 
-void Player::collisionDetection(SDL_Rect debreeRect, int type)
+bool Player::collisionDetection(SDL_Rect debreeRect, int type)
 {
     if (collRectRect(debreeRect, m_rocket.rect)) {
         statsChange(type);
+        cout << type << "\n";
+        return true;
     }
+    return false;
 }
 
 int Player::getHealth()
