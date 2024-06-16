@@ -2,17 +2,17 @@
 #include "Presenter.h"
 
 
-void Space_debree::init(int start, int2 speed, string texture, int2 size, int type)
+void Space_debree::init(int start, int2 speed, SDL_Texture* texture, int2 size, int type)
 {
 	m_speed = speed;
 	m_drawable.rect.x = start;
 	m_drawable.rect.y = 0;
 	m_drawable.rect.w = size.x;
 	m_drawable.rect.h = size.y;
-	m_drawable.texture = loadTexture(GAME_FOLDER + texture);
-	cout << GAME_FOLDER + texture;
+	m_drawable.texture = texture;
+	
 
-	m_type = type;
+	
 }
 
 void Space_debree::draw()

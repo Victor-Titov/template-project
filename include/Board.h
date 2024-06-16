@@ -4,7 +4,7 @@
 #include "Button.h"
 #include "TextField.h"
 #include "Player.h"
-#include "Space_debree.h"
+#include "debree_generator.h"
 class Board
 {
 public:
@@ -18,6 +18,6 @@ public:
 
 private:
 	Player m_cat;
-	Space_debree m_debree;
+	debree_generator generator;
 
 };
