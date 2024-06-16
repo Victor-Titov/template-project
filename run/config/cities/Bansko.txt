@@ -1,4 +1,0 @@
-Name: Bansko
-Price: 120
-City_Rect: 600 900 80 160 
-Color: 2

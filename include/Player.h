@@ -14,4 +14,12 @@ public:
 	void draw();
 	void destroy();
 
+private:
+
+	Drawable player_rocket;
+	int speed;
+	int fuel;
+	int health;
+	bool nitro;
+
 };

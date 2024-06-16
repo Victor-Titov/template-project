@@ -1,0 +1,1 @@
+img_path: cat_meli.bmp

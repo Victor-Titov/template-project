@@ -1,4 +1,0 @@
-Name: Orqhovo
-Price: 240
-City_Rect: 840 20 80 160
-Color: 5

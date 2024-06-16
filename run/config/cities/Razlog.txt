@@ -1,4 +1,0 @@
-Name: Razlog
-Price: 100
-City_Rect: 680 900 80 160 
-Color: 2

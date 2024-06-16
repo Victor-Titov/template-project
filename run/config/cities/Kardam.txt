@@ -1,4 +1,0 @@
-city_name: Kardam
-price: 140
-Rect: 440 660 160 80
-Color: 3

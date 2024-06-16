@@ -1,4 +1,0 @@
-Name: Asenovgrad
-Price: 340
-City_Rect: 1320 580 160 80
-Color: 8

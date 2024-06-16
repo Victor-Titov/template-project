@@ -1,4 +1,0 @@
-Name: Plovdiv
-Price: 300
-City_Rect: 1320 180 160 80 
-Color: 7

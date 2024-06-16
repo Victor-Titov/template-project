@@ -1,4 +1,0 @@
-Name: Samokov
-Price: 80
-City_Rect: 1000 900 80 160
-Color: 1

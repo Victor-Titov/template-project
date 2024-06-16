@@ -13,7 +13,9 @@ Player::~Player()
 
 void Player::init(string configFile)
 {
+    string tmp, textureImgPath;
 
+    
 }
 
 void Player::update()
