@@ -2,6 +2,7 @@
 
 #include "Engine.h"
 #include "inputManager.h"
+#include "Bar.h"
 
 
 class Player
@@ -29,5 +30,7 @@ private:
 	int m_fuel;
 	int m_health;
 	bool m_nitro;
+	Bar m_healthBar;
+	Bar m_fuelBar;
 
 };

@@ -1,0 +1,4 @@
+img_path_bar_1: black_bar.bmp
+rect: 26 18 392 43
+img_path_bar_2: fuel_bar.bmp
+rect: 26 18 392 43
