@@ -21,12 +21,13 @@ void Board::init()
 {
 	m_cat.init("rocket_config.txt", 10);
 	generator.init("debree_generator.txt");
-	
+	m_background = loadTexture(GAME_FOLDER + "space_background.bmp");
 }
 
 void Board::draw()
 {
 	//m_cat.burningFuel();
+	drawObject(m_background);
 	m_cat.draw();
 	generator.draw();
 
