@@ -1,0 +1,4 @@
+Texture: exit_button.bmp
+Rect: 239 95 101 97
+Max_increase: 20
+Increase_per_frame: 2

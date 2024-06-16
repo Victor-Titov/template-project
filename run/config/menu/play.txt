@@ -1,4 +1,4 @@
-Texture: play.bmp
-Rect: 680 701 500 146
-Max_increase: 30
+Texture: play_button.bmp
+Rect: 779 756 361 140
+Max_increase: 20
 Increase_per_frame: 2

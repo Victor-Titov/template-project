@@ -55,6 +55,8 @@ void Player::draw()
 void Player::destroy()
 {
     SDL_DestroyTexture(m_rocket.texture);
+    m_healthBar.destroy();
+    m_fuelBar.destroy();
 }
 
 void Player::moveRocket()
@@ -73,15 +75,17 @@ void Player::statsChange(int arg_type)
 {
     switch (arg_type) {
     case 1: // pepper
-        m_fuel = 10000;
+        m_fuel = 1000;
         break;
 
     case 2: // meteor
         m_health -= 1;
+        m_healthBar.setBar(m_health, 10);
         break;
 
     case 3: // star
         m_health += 1;
+        m_healthBar.setBar(m_health, 10);
         break;
 
     default:
