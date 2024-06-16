@@ -43,5 +43,6 @@ void Board::update()
 
 void Board::destroy()
 {
+
 }
 
