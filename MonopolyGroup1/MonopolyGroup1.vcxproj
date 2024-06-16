@@ -27,9 +27,13 @@
     <ClInclude Include="..\include\Game.h" />
     <ClInclude Include="..\include\InputManager.h" />
     <ClInclude Include="..\include\Menu.h" />
+    <ClInclude Include="..\include\Meteor.h" />
+    <ClInclude Include="..\include\Pepper.h" />
     <ClInclude Include="..\include\Player.h" />
     <ClInclude Include="..\include\Presenter.h" />
     <ClInclude Include="..\include\SoundManager.h" />
+    <ClInclude Include="..\include\Space_debree.h" />
+    <ClInclude Include="..\include\Star.h" />
     <ClInclude Include="..\include\State.h" />
     <ClInclude Include="..\include\StateManager.h" />
     <ClInclude Include="..\include\TextField.h" />
@@ -48,9 +52,13 @@
     <ClCompile Include="..\src\InputManager.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Menu.cpp" />
+    <ClCompile Include="..\src\Meteor.cpp" />
+    <ClCompile Include="..\src\Pepper.cpp" />
     <ClCompile Include="..\src\Player.cpp" />
     <ClCompile Include="..\src\Presenter.cpp" />
     <ClCompile Include="..\src\SoundManager.cpp" />
+    <ClCompile Include="..\src\Space_debree.cpp" />
+    <ClCompile Include="..\src\Star.cpp" />
     <ClCompile Include="..\src\State.cpp" />
     <ClCompile Include="..\src\StateManager.cpp" />
     <ClCompile Include="..\src\TextField.cpp" />
