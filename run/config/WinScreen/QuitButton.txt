@@ -1,4 +1,4 @@
 Texture: Quit.bmp
-Rect: 1136 754 450 150
+Rect: 244 105 101 97
 Max_increase: 30
 Increase_per_frame: 2

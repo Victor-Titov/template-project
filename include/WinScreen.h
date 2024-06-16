@@ -21,7 +21,7 @@ private:
 	SDL_Texture* m_backround;
 	Button m_playAgain;
 	Button m_quit;
-	
-	TextField m_winnerField;
-	
+	int score = 0;
+
+	TextField m_score;
 };

@@ -1,4 +1,4 @@
-Backround_image: WinScreen.bmp
+Backround_image: background.bmp
 Play_again_config: PlayAgainButton.txt
 Quit_button_config: QuitButton.txt
-Winner_field: winner.txt
+Score_field: WinScreenScore.txt

@@ -14,7 +14,7 @@ public:
 	void draw();
 	void update();
 	void destroy();
-
+	int getScore();
 
 private:
 	Player m_cat;

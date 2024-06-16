@@ -46,6 +46,9 @@ void Board::update()
 		
 	}
 	m_cat.update();
+	if (m_cat.getHealth() <= 0) {
+		world.m_stateManager.changeGameState(GAME_STATE::WIN_SCREEN);
+	}
 	
 }
 
@@ -54,5 +57,10 @@ void Board::destroy()
 	m_cat.destroy();
 	generator.destroy();
 	
+}
+
+int Board::getScore()
+{
+	return m_cat.getScore();
 }
 

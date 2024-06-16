@@ -1,0 +1,5 @@
+rect: 671 270 100
+font_size: 50
+background_rect: 815 373 90 63
+font_color: 2
+background: no

@@ -158,4 +158,9 @@ int Player::getFuel()
     return m_fuel;
 }
 
+int Player::getScore()
+{
+    return m_score;
+}
+
 

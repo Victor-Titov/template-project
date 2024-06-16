@@ -21,7 +21,7 @@ public:
 	bool collisionDetection(SDL_Rect debreeRect, int type);
 	int getHealth();
 	int getFuel();
-
+	int getScore();
 private:
 
 	Drawable m_rocket;
