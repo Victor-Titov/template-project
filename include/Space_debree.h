@@ -2,7 +2,7 @@
 #include "defines.h"
 class Space_debree {
 public:
-	void init(int start, int2 speed, string texture, int2 size, int type);
+	void init(int start, int2 speed, SDL_Texture* texture, int2 size, int type);
 	void draw();
 	void update();
 	void destroy();
