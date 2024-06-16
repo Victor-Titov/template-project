@@ -1,1 +1,2 @@
 img_path: cat_meli.bmp
+starting_rect: -92 288 185 228
