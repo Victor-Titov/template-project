@@ -22,7 +22,6 @@ void Board::init()
 	m_cat.init("rocket_config.txt", 10);
 	generator.init("debree_generator.txt");
 	m_debree_amount = generator.getDerbeeAmount();
-	
 	m_background = loadTexture(GAME_FOLDER + "space_background.bmp");
 }
 

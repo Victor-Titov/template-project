@@ -143,7 +143,7 @@ bool Player::collisionDetection(SDL_Rect debreeRect, int type)
 {
     if (collRectRect(debreeRect, m_rocket.rect)) {
         statsChange(type);
-        cout << type << "\n";
+        //cout << type << "\n";
         return true;
     }
     return false;

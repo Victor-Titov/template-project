@@ -5,6 +5,7 @@
 #include "TextField.h"
 #include "Player.h"
 #include "debree_generator.h"
+#include "SoundManager.h"
 class Board
 {
 public:
@@ -21,5 +22,6 @@ private:
 	debree_generator generator;
 	int m_debree_amount;
 	SDL_Texture* m_background;
+	
 
 };

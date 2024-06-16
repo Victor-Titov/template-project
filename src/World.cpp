@@ -15,6 +15,7 @@ void World::init()
 	m_soundManager.init();
 	m_presenter.init();
 	m_stateManager.init(GAME_STATE::MENU);
+	//m_soundManager.playSound(SOUND::BACKGORUND_MUSIC);
 }
 
 void World::run()
