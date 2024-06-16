@@ -43,6 +43,6 @@ void Board::update()
 
 void Board::destroy()
 {
-
+	m_cat.destroy();
 }
 
