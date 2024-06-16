@@ -31,6 +31,16 @@ void Space_debree::destroy()
 	SDL_DestroyTexture(m_drawable.texture);
 }
 
+int Space_debree::getType()
+{
+	return m_type;
+}
+
+int Space_debree::GetValue()
+{
+	return m_value;
+}
+
 
 SDL_Rect Space_debree::getRect()
 {

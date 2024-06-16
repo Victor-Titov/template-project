@@ -6,7 +6,8 @@ public:
 	void draw();
 	void update(SDL_Rect playerRect);
 	void destroy();
-	
+	int getType();
+	int GetValue();
 	SDL_Rect getRect();
 protected:
 	Drawable m_drawable;
