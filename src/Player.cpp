@@ -28,9 +28,10 @@ void Player::init(string configFile, int arg_speed)
     //cout << textureImgPath << endl;
 
     m_rocket.texture = loadTexture(GAME_FOLDER + textureImgPath);
-    m_health = 100;
+    m_health = 10;
     m_fuel = 100;
     m_speed = arg_speed;
+    original_speed = arg_speed;
     m_nitro = false;
     //cout << m_rocket.rect.x << endl;
 
@@ -53,11 +54,43 @@ void Player::destroy()
 
 void Player::moveRocket()
 {
-    if (isKeyPressed(SDL_SCANCODE_A)) {
+    if (isKeyPressed(SDL_SCANCODE_A) && m_rocket.rect.x >= 0) {
         m_rocket.rect.x -= m_speed;
     }
-    else if (isKeyPressed(SDL_SCANCODE_D)) {
+    else if (isKeyPressed(SDL_SCANCODE_D) && m_rocket.rect.x + m_rocket.rect.w <= 1920) {
         m_rocket.rect.x += m_speed;
+    }
+}
+
+void Player::statsChange(int arg_type)
+{
+    switch (arg_type) {
+    case 1: // pepper
+        m_fuel = 100;
+        break;
+
+    case 2: // meteor
+        m_health -= 1;
+        break;
+
+    case 3: // star
+        m_health += 1;
+        break;
+
+    default:
+        break;
+    }
+}
+
+void Player::burningFuel()
+{
+    if (isKeyPressed(SDL_SCANCODE_SPACE)) {
+        m_fuel -= 5;
+        m_speed = original_speed + 5;
+    }
+    else {
+        m_speed = original_speed;
+        m_fuel -= 1;
     }
 }
 

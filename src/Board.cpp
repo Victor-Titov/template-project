@@ -24,8 +24,8 @@ void Board::init()
 
 void Board::draw()
 {
+	m_cat.burningFuel();
 	m_cat.draw();
-	
 }
 
 void Board::update()
