@@ -16,7 +16,7 @@ void Player::init(string configFile, int arg_speed)
     string tmp, textureImgPath;
     
     fstream stream;
-    m_rocket.rect.x = 0;
+    //m_rocket.rect.x = 0;
 
     //cout << CONFIG_FOLDER + configFile << endl;
 
@@ -32,6 +32,7 @@ void Player::init(string configFile, int arg_speed)
     m_fuel = 1000;
     m_maxHealth = 10;
     m_maxFuel = 1000;
+    m_score = 0;
     m_speed = arg_speed;
     original_speed = arg_speed;
     m_nitro = false;
