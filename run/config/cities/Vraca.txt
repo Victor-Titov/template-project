@@ -1,4 +1,0 @@
-Name: Vraca
-Price: 220
-City_Rect: 760 20 80 160
-Color: 5

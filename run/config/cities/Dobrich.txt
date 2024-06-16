@@ -1,4 +1,0 @@
-city_name: Dobrich
-price: 160
-Rect: 440 580 160 80
-Color: 3

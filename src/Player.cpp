@@ -11,8 +11,28 @@ Player::~Player()
 
 }
 
-void Player::init(string configFile)
+void Player::init(string configFile, int arg_speed)
 {
+    string tmp, textureImgPath;
+    
+    fstream stream;
+    m_rocket.rect.x = 0;
+
+    //cout << CONFIG_FOLDER + configFile << endl;
+
+    stream.open(CONFIG_FOLDER + configFile);
+    stream >> tmp >> textureImgPath;
+    stream >> tmp >> m_rocket.rect.x >> m_rocket.rect.y >> m_rocket.rect.w >> m_rocket.rect.h;
+    stream.close();
+
+    //cout << textureImgPath << endl;
+
+    m_rocket.texture = loadTexture(GAME_FOLDER + textureImgPath);
+    m_health = 100;
+    m_fuel = 100;
+    m_speed = arg_speed;
+    m_nitro = false;
+    //cout << m_rocket.rect.x << endl;
 
 }
 
@@ -23,10 +43,22 @@ void Player::update()
 
 void Player::draw()
 {
-    
+    drawObject(m_rocket);
 }
 
 void Player::destroy()
 {
-   
+    SDL_DestroyTexture(m_rocket.texture);
 }
+
+void Player::moveRocket()
+{
+    if (isKeyPressed(SDL_SCANCODE_A)) {
+        m_rocket.rect.x += m_speed;
+    }
+    else if (isKeyPressed(SDL_SCANCODE_D)) {
+        m_rocket.rect.x -= m_speed;
+    }
+}
+
+

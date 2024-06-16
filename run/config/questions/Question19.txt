@@ -1,2 +1,0 @@
-Questions_Img: Question19.bmp AnswersV.bmp
-Money: 50

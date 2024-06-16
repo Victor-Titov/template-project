@@ -1,4 +1,0 @@
-city_name: Devnq
-price: 180
-Rect: 440 420 160 80
-Color: 4

@@ -1,4 +1,0 @@
-Name: Karlovo
-Price: 320
-City_Rect: 1320 420 160 80 
-Color: 7

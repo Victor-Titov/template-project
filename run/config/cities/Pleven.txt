@@ -1,4 +1,0 @@
-Name: Pleven
-Price: 260
-City_Rect: 1160 20 80 160
-Color: 6

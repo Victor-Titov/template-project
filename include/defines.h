@@ -12,17 +12,14 @@ using namespace std;
 
 static string IMG_FOLDER = "img\\";
 static string CONFIG_FOLDER = "config\\";
-static string SOUND_FOLDER = "sound\\";
-static string CITIES_FOLDER = "cities\\";
-static string STATIONS_FOLDER = "stations\\";
-static string QUESTION_FOLDER = "questions\\";
 static string MENU_FOLDER = "menu\\";
 static string TITLESCREEN_FOLDER = "titlescreen\\";
 static string WIN_SCREEN_FOLDER = "WinScreen\\";
 static string GAME_FOLDER = "game\\";
 static string FONT_FOLDER = "font\\";
 static string FIELD_FOLDER = "fields\\";
-static string HOUSE_POPUP_FOLDER = "housesB\\";
+static string SOUND_FOLDER = "sound\\";
+static string PLAYER_FOLDER = "player\\";
 
 struct int2
 {
