@@ -40,4 +40,6 @@ void Menu::run()
 void Menu::destroy()
 {
 	SDL_DestroyTexture(m_menu);
+	m_play.destroy();
+	m_exit.destroy();
 }
