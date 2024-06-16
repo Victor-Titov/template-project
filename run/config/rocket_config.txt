@@ -1,2 +1,2 @@
-img_path: rocket_img.bmp
+img_path: rocket_with_Cat.bmp
 rect: 867 803 185 228
