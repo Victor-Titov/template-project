@@ -29,7 +29,7 @@ void Player::init(string configFile, int arg_speed)
 
     m_rocket.texture = loadTexture(GAME_FOLDER + textureImgPath);
     m_health = 10;
-    m_fuel = 10000;
+    m_fuel = 1000;
     m_speed = arg_speed;
     original_speed = arg_speed;
     m_nitro = false;
@@ -94,28 +94,29 @@ void Player::burningFuel()
     if (m_fuel > 0) {
         if (isKeyPressed(SDL_SCANCODE_SPACE)) {
             m_fuel -= 5;
-            m_fuelBar.lowerBar(5, 10000);
+            m_fuelBar.setBar(m_fuel, 1000);
             m_speed = original_speed + 5;
         }
         else {
             m_speed = original_speed;
             m_fuel -= 1;
-            m_fuelBar.lowerBar(1, 10000);
+            m_fuelBar.setBar(m_fuel, 1000);
         }
         cout << m_fuel << endl;
     }
     else {
         if (isKeyPressed(SDL_SCANCODE_SPACE)) {
             m_health -= 5;
-            m_healthBar.lowerBar(5, 10);
+            m_healthBar.setBar(m_health, 10);
             m_speed = original_speed + 5;
         }
         else {
             m_speed = original_speed;
             m_health -= 1;
-            m_healthBar.lowerBar(1, 10);
+            m_healthBar.setBar(m_health, 10);
         }
         cout << m_health << endl;
+        m_fuel = 0;
     }
 }
 

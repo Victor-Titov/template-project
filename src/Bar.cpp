@@ -51,12 +51,8 @@ void Bar::destroy()
 	SDL_DestroyTexture(colouredBar.texture);
 }
 
-void Bar::lowerBar(int offset, int barSize)
+void Bar::setBar(int currNum, int maxNum)
 {
-	colouredBar.rect.w = colouredBar.rect.w - ((1.0*offset) / barSize) * original_width;
+	colouredBar.rect.w = original_width * currNum / maxNum;
 }
 
-void Bar::increaseBar(int offset, int barSize)
-{
-	colouredBar.rect.w = colouredBar.rect.w + ((1.0*offset) / barSize) * original_width;
-}
