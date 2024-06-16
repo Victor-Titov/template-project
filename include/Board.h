@@ -19,6 +19,7 @@ public:
 private:
 	Player m_cat;
 	debree_generator generator;
+	int m_debree_amount;
 	SDL_Texture* m_background;
 
 };

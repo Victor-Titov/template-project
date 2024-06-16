@@ -18,7 +18,7 @@ public:
 	void moveRocket();
 	void statsChange(int arg_type); //stats change depending on the type of thing you hit
 	void burningFuel();
-	bool collisionDetection(SDL_Rect debreeRect);
+	void collisionDetection(SDL_Rect debreeRect, int type);
 	int getHealth();
 	int getFuel();
 

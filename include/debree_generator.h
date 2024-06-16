@@ -9,6 +9,9 @@ public:
 	void draw();
 	void update();
 	void destroy();
+	SDL_Rect getDebreeRect(int debree_num);
+	int getDerbeeAmount();
+	int getDebreeType(int debree_num);
 private:
 	Space_debree temp_debree;
 	int m_debreeAmount;

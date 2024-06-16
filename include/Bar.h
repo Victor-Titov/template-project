@@ -14,8 +14,8 @@ public:
 	void update();
 	void draw();
 	void destroy();
-	void lowerBar(int offset, int barSize);
-	void increaseBar(int offset, int barSize);
+	void setBar(int currNum, int maxNum);
+
 
 private:
 
