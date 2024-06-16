@@ -40,9 +40,12 @@ void Board::update()
 	m_cat.moveRocket();
 	generator.update();
 	for (int i = 0; i < m_debree_amount; i++) {
-		m_cat.collisionDetection(generator.getDebreeRect(i), generator.getDebreeType(i));
+		if (m_cat.collisionDetection(generator.getDebreeRect(i), generator.getDebreeType(i))) {
+			generator.reset(i);
+		}
 		
 	}
+	m_cat.update();
 	
 }
 

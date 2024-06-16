@@ -1,0 +1,5 @@
+rect: 1700 50 50
+font_size: 50
+background_rect: 1700 0 220 100
+font_color: 2
+background: no

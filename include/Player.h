@@ -3,7 +3,7 @@
 #include "Engine.h"
 #include "inputManager.h"
 #include "Bar.h"
-
+#include "TextField.h"
 
 class Player
 {
@@ -18,7 +18,7 @@ public:
 	void moveRocket();
 	void statsChange(int arg_type); //stats change depending on the type of thing you hit
 	void burningFuel();
-	void collisionDetection(SDL_Rect debreeRect, int type);
+	bool collisionDetection(SDL_Rect debreeRect, int type);
 	int getHealth();
 	int getFuel();
 
@@ -32,5 +32,9 @@ private:
 	bool m_nitro;
 	Bar m_healthBar;
 	Bar m_fuelBar;
+	int m_maxFuel;
+	int m_maxHealth;
+	unsigned long long m_score;
+	TextField m_score_field;
 
 };
