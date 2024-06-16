@@ -1,0 +1,2 @@
+img_path: rocket_img.bmp
+rect: 867 803 185 228

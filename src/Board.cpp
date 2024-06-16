@@ -19,7 +19,7 @@ Board::~Board()
 
 void Board::init()
 {
-	m_cat.init("rocketConfig.txt", 10);
+	m_cat.init("rocket_config.txt", 10);
 }
 
 void Board::draw()
