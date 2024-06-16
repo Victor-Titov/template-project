@@ -56,7 +56,7 @@ void Board::destroy()
 {
 	m_cat.destroy();
 	generator.destroy();
-	
+	SDL_DestroyTexture(m_background);
 }
 
 int Board::getScore()
