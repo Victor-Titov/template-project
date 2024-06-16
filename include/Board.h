@@ -4,7 +4,7 @@
 #include "Button.h"
 #include "TextField.h"
 #include "Player.h"
-
+#include "Space_debree.h"
 class Board
 {
 public:
@@ -15,8 +15,9 @@ public:
 	void update();
 	void destroy();
 
-	Player m_cat;
 
 private:
+	Player m_cat;
+	Space_debree m_debree;
 
 };
