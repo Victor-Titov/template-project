@@ -15,6 +15,9 @@ public:
 	void draw();
 	void destroy();
 	void moveRocket();
+	bool collisionDetection(SDL_Rect debreeRect);
+	int getHealth();
+	int getFuel();
 
 private:
 

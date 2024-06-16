@@ -15,8 +15,8 @@ public:
 	void update();
 	void destroy();
 
-	Player m_cat;
-
 private:
+
+	Player m_cat;
 
 };

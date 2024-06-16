@@ -25,6 +25,7 @@ void Board::init()
 void Board::draw()
 {
 	m_cat.draw();
+	
 }
 
 void Board::update()
@@ -34,5 +35,6 @@ void Board::update()
 
 void Board::destroy()
 {
+	m_cat.destroy();
 }
 
