@@ -29,11 +29,14 @@ void Player::init(string configFile, int arg_speed)
 
     m_rocket.texture = loadTexture(GAME_FOLDER + textureImgPath);
     m_health = 10;
-    m_fuel = 100;
+    m_fuel = 10000;
     m_speed = arg_speed;
     original_speed = arg_speed;
     m_nitro = false;
     //cout << m_rocket.rect.x << endl;
+
+    m_healthBar.init("health_bar.txt");
+    m_fuelBar.init("fuel_bar.txt");
 
 }
 
@@ -45,6 +48,8 @@ void Player::update()
 void Player::draw()
 {
     drawObject(m_rocket);
+    m_healthBar.draw();
+    m_fuelBar.draw();
 }
 
 void Player::destroy()
@@ -56,9 +61,11 @@ void Player::moveRocket()
 {
     if (isKeyPressed(SDL_SCANCODE_A) && m_rocket.rect.x >= 0) {
         m_rocket.rect.x -= m_speed;
+        burningFuel();
     }
     else if (isKeyPressed(SDL_SCANCODE_D) && m_rocket.rect.x + m_rocket.rect.w <= 1920) {
         m_rocket.rect.x += m_speed;
+        burningFuel();
     }
 }
 
@@ -66,7 +73,7 @@ void Player::statsChange(int arg_type)
 {
     switch (arg_type) {
     case 1: // pepper
-        m_fuel = 100;
+        m_fuel = 10000;
         break;
 
     case 2: // meteor
@@ -84,13 +91,31 @@ void Player::statsChange(int arg_type)
 
 void Player::burningFuel()
 {
-    if (isKeyPressed(SDL_SCANCODE_SPACE)) {
-        m_fuel -= 5;
-        m_speed = original_speed + 5;
+    if (m_fuel > 0) {
+        if (isKeyPressed(SDL_SCANCODE_SPACE)) {
+            m_fuel -= 5;
+            m_fuelBar.lowerBar(5, 10000);
+            m_speed = original_speed + 5;
+        }
+        else {
+            m_speed = original_speed;
+            m_fuel -= 1;
+            m_fuelBar.lowerBar(1, 10000);
+        }
+        cout << m_fuel << endl;
     }
     else {
-        m_speed = original_speed;
-        m_fuel -= 1;
+        if (isKeyPressed(SDL_SCANCODE_SPACE)) {
+            m_health -= 5;
+            m_healthBar.lowerBar(5, 10);
+            m_speed = original_speed + 5;
+        }
+        else {
+            m_speed = original_speed;
+            m_health -= 1;
+            m_healthBar.lowerBar(1, 10);
+        }
+        cout << m_health << endl;
     }
 }
 

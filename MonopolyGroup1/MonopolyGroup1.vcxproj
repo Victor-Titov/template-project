@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Bar.h" />
     <ClInclude Include="..\include\Board.h" />
     <ClInclude Include="..\include\Button.h" />
     <ClInclude Include="..\include\ConfiglessTTF.h" />
@@ -41,6 +42,7 @@
     <ClInclude Include="..\include\Writer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Bar.cpp" />
     <ClCompile Include="..\src\Board.cpp" />
     <ClCompile Include="..\src\Button.cpp" />
     <ClCompile Include="..\src\ConfiglessTTF.cpp" />
