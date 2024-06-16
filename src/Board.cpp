@@ -21,12 +21,13 @@ void Board::init()
 {
 	m_cat.init("rocket_config.txt", 10);
 	int2 temp;
-	temp.x = 10;
-	temp.y = 10;
+	temp.x = 5;
+	temp.y = 15;
 	int2 temp2;
 	temp2.x = 50;
 	temp2.y = 50;
-	m_debree.init(10, temp, "No.bmp", temp2, 5);
+	m_debree.init(500, temp, "No.bmp", temp2, 1);
+	
 }
 
 void Board::draw()
@@ -44,5 +45,6 @@ void Board::update()
 void Board::destroy()
 {
 	m_cat.destroy();
+	m_debree.destroy();
 }
 
